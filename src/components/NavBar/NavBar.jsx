@@ -6,15 +6,13 @@ export default function NavBar() {
     <Fragment>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <h1>NeonDoro</h1>
+          <h1>NeonPomo</h1>
         </div>
         <div className={styles.links}>
           <a href="/github">GitHub</a>
           <a href="/mainpage">Main Page</a>
         </div>
       </div>
-   
-      ;
     </Fragment>
   );
 }

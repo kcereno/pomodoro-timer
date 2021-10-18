@@ -1,37 +1,29 @@
 .container {
-    background-color:transparent;
+    background-color: transparent;
     height: 90px;
     display: flex;
     justify-content: space-around;
     align-items: center
-  }
+}
 
-  .logo {
-      color: #F890E7;
-      font-family: 'Yesteryear', cursive;
-      font-size: 20px;    
-  }
+.logo {
+    font-family: 'Audiowide', cursive;
+    font-size: 20px;
+}
 
-  .links {
-      display: flex;
-      align-items: center
-  }
+.links {
+    display: flex;
+    align-items: center
+}
 
-  .links a{
-      font-size: 20px;
-      color: #F890E7;
-      font-family: 'Montserrat', sans-serif;
-      margin: 10px;
-      text-decoration: none;
-  }
+.links a {
+    font-size: 20px;
 
-  .links a:hover {
-      background-color: #F890E7;
-      color:black
-  }
+    margin: 10px;
 
-  .separator {
-    border-top: 8px solid #F890E7;
-    border-radius: 5px;
-    width: 50%;
-  }
+}
+
+.links a:hover {
+    background-color: #F890E7;
+    color: black
+}

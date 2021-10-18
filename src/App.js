@@ -1,14 +1,13 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
+import Timer from "./components/Timer/Timer";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <NavBar />
-        <div className="timer">
-          <h1>timer</h1>
-        </div>
+        <Timer />
         <div className="tracker">
           <h1>tracker</h1>
         </div>

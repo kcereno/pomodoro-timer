@@ -1,18 +1,12 @@
 body {
-  background-color: #eb7d5b;
+  background-color: black;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-
   min-height: 100vh;
 
-}
-
-.header {
-  background-color: #442288;
-  height: 64px;
 }
 
 .timer {

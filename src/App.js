@@ -1,13 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="header">
-          <h1>header</h1>
-        </div>
+        <NavBar />
         <div className="timer">
           <h1>timer</h1>
         </div>

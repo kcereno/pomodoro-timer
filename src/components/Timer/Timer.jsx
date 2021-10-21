@@ -1,17 +1,15 @@
-import ModeControls from "./ModeControls/ModeControls";
 import styles from "./Timer.module.css";
+import TimerClock from "./TimerClock/TimerClock";
+import TImerControls from "./TimerControls/TimerControls";
+
+import TimerSettings from "./TimerSettings/TimerSettings";
 
 export default function Timer() {
   return (
     <div className={styles.container}>
-     <ModeControls />
-        <div className={styles.clock}>
-          <h1>Timer</h1>
-        </div>
-        <div className={styles.clockControls}>
-          <h1>Timer Controls</h1>
-        </div>
-      </div>
-
+      <TimerSettings />
+      <TimerClock />
+      <TImerControls />
+    </div>
   );
 }

@@ -1,29 +1,7 @@
 .container {
-    background-color: transparent;
-    height: 90px;
     display: flex;
     justify-content: space-around;
-    align-items: center
+    align-items: center;
+    height: 80px
 }
 
-.logo {
-    font-family: 'Audiowide', cursive;
-    font-size: 20px;
-}
-
-.links {
-    display: flex;
-    align-items: center
-}
-
-.links a {
-    font-size: 20px;
-
-    margin: 10px;
-
-}
-
-.links a:hover {
-    background-color: #F890E7;
-    color: black
-}

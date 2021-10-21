@@ -1,5 +1,4 @@
 .container {
-    background-color: transparent;
-    flex-basis: 45vh;
-    color: #F890E7;
+    margin-top: 20px;
+    text-align: center;
 }

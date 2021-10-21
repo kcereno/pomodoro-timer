@@ -1,0 +1,41 @@
+$primary-color: #ff4df0;
+$secondary-color: #70ffdf;
+$tertiary-color: #045ded;
+
+$primary-font: 'Oswald', sans-serif;
+$secondary-font:'Open Sans', sans-serif;
+body {
+  background-color: black;
+  color: $primary-color;
+  font-family: $primary-font;
+  width: 70vw;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color
+}
+
+hr {
+  width: 50vw;
+  border: 0;
+  height: 1px;
+  background: $primary-color;
+}
+
+button {
+  font-family: $secondary-font;
+  background-color: black;
+  color: $primary-color;
+  transition-duration: 0.4s;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: $primary-color; 
+  color: black; 
+border-radius: 5px;
+}

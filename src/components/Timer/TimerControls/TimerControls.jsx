@@ -1,19 +1,24 @@
+import { useContext } from "react";
+import AppContext from "../../../store/AppContext";
 import styles from "./TimerControls.module.scss";
 
 export default function TImerControls() {
-  const startButton = <button className={styles.startButton}>Start</button>;
+  const { toggleTimer, timerIsRunning } = useContext(AppContext);
+
+  const startButton = (
+    <button onClick={toggleTimer} className={styles.startButton}>
+      Start
+    </button>
+  );
 
   const pauseEndButton = (
     <div className={styles.pauseEndButtons}>
-      <button>Pause</button>
+      <button onClick={toggleTimer}>Pause</button>
       <button>End</button>
     </div>
   );
 
-  return (
-    <div>
-      {/* {startButton} */}
-      {pauseEndButton}
-    </div>
-  );
+  const controls = timerIsRunning ? pauseEndButton : startButton;
+
+  return <div>{controls}</div>;
 }

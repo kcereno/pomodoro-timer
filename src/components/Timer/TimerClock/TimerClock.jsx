@@ -1,9 +1,9 @@
 import { useContext } from "react";
-
 import AppContext from "../../../store/AppContext";
 import "./TimerClock.module.css";
 
 export default function TimerClock() {
+
   const { timerTime, timerIsRunning } = useContext(AppContext);
 
   const convertSeconds = (secs) => {
@@ -17,9 +17,6 @@ export default function TimerClock() {
   };
 
   let time = convertSeconds(timerTime);
-
-
-
 
   return <p>{time}</p>;
 }

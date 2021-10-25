@@ -4,15 +4,29 @@ import AppContext from "../../../store/AppContext";
 import styles from "./TimerSettings.module.css";
 
 export default function TimerSettings() {
-  const { timer } = useContext(AppContext);
-  const { setting, time, updateSetting } = timer;
+  const { setting, setSetting, setSeconds, setTimerStarted } =
+    useContext(AppContext);
 
-  function clickHandler(e){
-    const newSetting = e.target.value
-    updateSetting(newSetting)
+  function updateSetting(newSetting) {
+    let newSeconds;
+
+    if (newSetting === "pomodoro") {
+      newSeconds = 1500;
+    } else if (newSetting === "shortBreak") {
+      newSeconds = 300;
+    } else {
+      newSeconds = 900;
+    }
+
+    setSetting(newSetting);
+    setSeconds(newSeconds);
+    setTimerStarted(false);
   }
 
-  console.log(setting)
+  function clickHandler(e) {
+    const newSetting = e.target.value;
+    updateSetting(newSetting);
+  }
 
   return (
     <div className={styles.container}>

@@ -1,41 +1,22 @@
 import React, { useState } from "react";
 
-const AppContext = React.createContext({
-  timer: "",
-  timerControls: {},
-  updateClockTime: () => {},
-});
+const AppContext = React.createContext({});
 
 export const AppContextProvider = (props) => {
-  const [setting, setSetting] = useState("pomodoro");
-  const [time, setTime] = useState(1500);
-  const [isRunning, setIsRunning] = useState(false);
+  const INITIAL_SETTING = "pomodoro";
+  const INITIAL_SECONDS = 1500;
 
-  function updateSetting(newSetting) {
-
-    if (newSetting === "pomodoro") {
-      setTime(1500);
-    } else if (newSetting === "shortBreak") {
-      setTime(300);
-    } else {
-      setTime(900)
-    }
-
-    setSetting(newSetting)
-  }
+  const [setting, setSetting] = useState(INITIAL_SETTING);
+  const [timerStarted, setTimerStarted] = useState(false);
+  const [seconds, setSeconds] = useState(INITIAL_SECONDS);
 
   const AppContextValue = {
-    timer: {
-      setting,
-      time,
-      isRunning,
-      updateSetting,
-    },
-    timerControls: {
-      start: () => {},
-      pause: () => {},
-      end: () => {},
-    },
+    setting,
+    setSetting,
+    timerStarted,
+    setTimerStarted,
+    seconds,
+    setSeconds,
   };
 
   return (

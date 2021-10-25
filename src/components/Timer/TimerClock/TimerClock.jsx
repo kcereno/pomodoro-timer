@@ -3,8 +3,7 @@ import AppContext from "../../../store/AppContext";
 import "./TimerClock.module.css";
 
 export default function TimerClock() {
-
-  const { timerTime, timerIsRunning } = useContext(AppContext);
+  const { seconds } = useContext(AppContext);
 
   const convertSeconds = (secs) => {
     let minutes = Math.floor(secs / 60);
@@ -16,7 +15,7 @@ export default function TimerClock() {
     return `${minutes}:${seconds}`;
   };
 
-  let time = convertSeconds(timerTime);
+  let time = convertSeconds(seconds);
 
   return <p>{time}</p>;
 }

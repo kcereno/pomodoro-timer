@@ -1,9 +1,37 @@
 import { useContext } from "react";
+import { useEffect, useState } from "react/cjs/react.development";
 import AppContext from "../../../store/AppContext";
 import styles from "./TimerControls.module.scss";
 
-export default function TImerControls() {
-  const { toggleTimer, timerIsRunning } = useContext(AppContext);
+export default function TimerControls() {
+  const { timerStarted, setTimerStarted, setSeconds, setting } =
+    useContext(AppContext);
+
+  const [timerId, setTimerId] = useState(null);
+
+  const startTimer = () => {
+    let newTimerId = setInterval(() => {
+      setSeconds((prevVal) => prevVal - 1);
+    }, 1000);
+    setTimerId(newTimerId);
+  };
+
+  const stopTimer = () => {
+    clearInterval(timerId);
+  };
+
+  const toggleTimer = () => {
+    if (!timerStarted) {
+      startTimer();
+    } else {
+      stopTimer();
+    }
+    setTimerStarted((prevVal) => !prevVal);
+  };
+
+  useEffect(()=>{
+    stopTimer()
+  },[setting])
 
   const startButton = (
     <button onClick={toggleTimer} className={styles.startButton}>
@@ -18,7 +46,9 @@ export default function TImerControls() {
     </div>
   );
 
-  const controls = timerIsRunning ? pauseEndButton : startButton;
+  const controls = timerStarted ? pauseEndButton : startButton;
 
   return <div>{controls}</div>;
 }
+
+

@@ -2,8 +2,9 @@ $primary-color: #ff4df0;
 $secondary-color: #70ffdf;
 $tertiary-color: #045ded;
 
-$primary-font: 'Oswald', sans-serif;
-$secondary-font:'Open Sans', sans-serif;
+$primary-font: "Oswald", sans-serif;
+$secondary-font: "Open Sans", sans-serif;
+
 body {
   background-color: black;
   color: $primary-color;
@@ -12,9 +13,20 @@ body {
   margin: auto;
 }
 
+.turqoise {
+  color: $secondary-font
+
+}
+
 a {
   text-decoration: none;
-  color: $primary-color
+  color: $primary-color;
+}
+
+h1 {
+  color: black;
+  text-shadow: -1px 0 $primary-color, 0 1px $primary-color, 1px 0 $primary-color,
+    0 -1px $primary-color;
 }
 
 hr {
@@ -34,8 +46,15 @@ button {
   padding: 5px;
 }
 
-button:hover {
-  background-color: $primary-color; 
-  color: black; 
-border-radius: 5px;
+button.active {
+  color: black;
+  border-radius: 5px;
+  background-color: $primary-color;
 }
+
+button:hover {
+  background-color: $primary-color;
+  color: black;
+  border-radius: 5px;
+}
+

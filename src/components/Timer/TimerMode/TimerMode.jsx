@@ -14,21 +14,21 @@ export default function TimerMode() {
   return (
     <div className={styles.container}>
       <button
-        className={mode === "pomodoro" ? styles.active : null}
+        className={mode === "pomodoro" ? 'active' : null}
         onClick={clickHandler}
         value="pomodoro"
       >
         Pomodoro
       </button>
       <button
-        className={mode === "shortBreak" ? styles.active : null}
+        className={mode === "shortBreak" ? 'active' : null}
         onClick={clickHandler}
         value="shortBreak"
       >
         Short Break
       </button>
       <button
-        className={mode === "LongBreak" ? styles.active : null}
+        className={mode === "LongBreak" ? 'active' : null}
         onClick={clickHandler}
         value="LongBreak"
       >

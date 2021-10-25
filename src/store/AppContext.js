@@ -30,6 +30,16 @@ export const AppContextProvider = (props) => {
   };
 
   const updateMode = (newMode) => {
+    if (timerStarted) {
+      const updateAlert = window.confirm(
+        "Changing modes will reset clock. Do you still want to continue?"
+      );
+
+      if (updateAlert === false) {
+        return;
+      }
+    }
+
     stopTimer();
     let newSeconds;
 

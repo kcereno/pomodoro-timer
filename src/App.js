@@ -7,12 +7,14 @@ import AppContext from "./store/AppContext";
 
 export default function App() {
 
-  const { mode } = useContext(AppContext)
+  const { appColor } = useContext(AppContext)
 
-  console.log(mode)
+  let color = `container ${appColor}`
+
+  console.log(color)
 
   return (
-    <div className="container">
+    <div className={color}>
       <NavBar />
       <Timer />
       <Footer />

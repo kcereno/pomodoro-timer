@@ -11,11 +11,13 @@ const AppContext = React.createContext({
 export const AppContextProvider = (props) => {
   const INITIAL_MODE = "pomodoro";
   const INITIAL_SECONDS = 1500;
+  const INITIAL_APP_COLOR = "primary-color";
 
   const [mode, setMode] = useState(INITIAL_MODE);
   const [timerStarted, setTimerStarted] = useState(false);
   const [seconds, setSeconds] = useState(INITIAL_SECONDS);
   const [timerId, setTimerId] = useState(null);
+  const [appColor, setAppColor] = useState(INITIAL_APP_COLOR);
 
   const startTimer = () => {
     let newTimerId = setInterval(() => {
@@ -41,18 +43,24 @@ export const AppContextProvider = (props) => {
     }
 
     stopTimer();
+
     let newSeconds;
+    let updatedAppColor;
 
     if (newMode === "pomodoro") {
       newSeconds = 1500;
+      updatedAppColor = "primary-color";
     } else if (newMode === "shortBreak") {
       newSeconds = 300;
+      updatedAppColor = "secondary-color";
     } else {
       newSeconds = 900;
+      updatedAppColor = "tertiary-color";
     }
 
     setMode(newMode);
     setSeconds(newSeconds);
+    setAppColor(updatedAppColor);
     setTimerStarted(false);
   };
 
@@ -87,6 +95,7 @@ export const AppContextProvider = (props) => {
     setTimerStarted,
     seconds,
     setSeconds,
+    appColor,
     controls: {
       toggleTimer,
       endTimer,

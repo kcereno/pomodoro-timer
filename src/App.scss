@@ -7,41 +7,101 @@ $secondary-font: "Open Sans", sans-serif;
 
 body {
   background-color: black;
-  color: $primary-color;
   font-family: $primary-font;
   width: 70vw;
   margin: auto;
 }
 
-.turqoise {
-  color: $secondary-font
+.primary-color {
+  color: $primary-color;
+  text-shadow: -1px 0 $primary-color, 0 1px $primary-color, 1px 0 $primary-color, 0 -1px $primary-color;
+  color: $primary-color;
+  hr {
+    background: $primary-color;
+  }
+  button {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  button.active {
+    background-color: $primary-color;
+  }
+  button:hover {
+    background-color: $primary-color;
+  }
+}
 
+.secondary-color {
+  color: $secondary-color;
+  text-shadow: -1px 0 $secondary-color, 0 1px $secondary-color, 1px 0 $secondary-color,
+    0 -1px $secondary-color;
+  color: $secondary-color;
+
+  hr {
+    background: $secondary-color;
+  }
+  button {
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+  }
+  button.active {
+    background-color: $secondary-color;
+  }
+  button:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.tertiary-color {
+  color: $tertiary-color;
+  text-shadow: -1px 0 $tertiary-color, 0 1px $tertiary-color, 1px 0 $tertiary-color, 0 -1px $tertiary-color;
+  color: $tertiary-color;
+  hr {
+    background: $tertiary-color;
+  }
+  button {
+    border: 1px solid $tertiary-color;
+    color: $tertiary-color;
+  }
+  button.active {
+    background-color: $tertiary-color;
+  }
+  button:hover {
+    background-color: $tertiary-color;
+  }
 }
 
 a {
   text-decoration: none;
-  color: $primary-color;
+  font-weight: bold;
+}
+
+a:visited {
+  color: transparent;
+}
+
+a:link {
+  color:black
 }
 
 h1 {
   color: black;
-  text-shadow: -1px 0 $primary-color, 0 1px $primary-color, 1px 0 $primary-color,
-    0 -1px $primary-color;
 }
 
 hr {
   width: 50vw;
   border: 0;
   height: 1px;
-  background: $primary-color;
+}
+
+p {
+  text-shadow: none;
 }
 
 button {
   font-family: $secondary-font;
   background-color: black;
-  color: $primary-color;
   transition-duration: 0.4s;
-  border: 1px solid $primary-color;
   border-radius: 5px;
   padding: 5px;
 }
@@ -49,7 +109,6 @@ button {
 button.active {
   color: black;
   border-radius: 5px;
-  background-color: $primary-color;
 }
 
 button:hover {
@@ -57,4 +116,5 @@ button:hover {
   color: black;
   border-radius: 5px;
 }
+
 

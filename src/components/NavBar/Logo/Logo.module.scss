@@ -1,0 +1,78 @@
+$primary-color: #ff4df0;
+$secondary-color: #70ffdf;
+$tertiary-color: #045ded;
+
+.logo {
+    font-size: 3em;   
+    font-weight: 400
+}
+
+.primary-color {
+    color: $primary-color;
+    text-shadow:
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 42px $primary-color,
+        0 0 82px $primary-color,
+        0 0 92px $primary-color,
+        0 0 102px $primary-color,
+        0 0 151px $primary-color;
+    color: $primary-color;
+    hr {
+      background: $primary-color;
+    }
+    button {
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+    button.active {
+      background-color: $primary-color;
+    }
+    button:hover {
+      background-color: $primary-color;
+    }
+  }
+  
+  .secondary-color {
+    color: $secondary-color;
+    text-shadow: -1px 0 $secondary-color, 0 1px $secondary-color, 1px 0 $secondary-color,
+      0 -1px $secondary-color;
+    color: $secondary-color;
+  
+    hr {
+      background: $secondary-color;
+    }
+    button {
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+    }
+    button.active {
+      background-color: $secondary-color;
+    }
+    button:hover {
+      background-color: $secondary-color;
+    }
+  }
+  
+  .tertiary-color {
+    color: $tertiary-color;
+    text-shadow: -1px 0 $tertiary-color, 0 1px $tertiary-color, 1px 0 $tertiary-color, 0 -1px $tertiary-color;
+    color: $tertiary-color;
+    hr {
+      background: $tertiary-color;
+    }
+    button {
+      border: 1px solid $tertiary-color;
+      color: $tertiary-color;
+    }
+    button.active {
+      background-color: $tertiary-color;
+    }
+    button:hover {
+      background-color: $tertiary-color;
+    }
+  }
+
+
+
